@@ -1,26 +1,25 @@
-# 一. 安装工具
-## 1. Node.js安装
+# 一.安装工具
+## 1.Node.js安装
 ```Shell
 sudo apt update
 sudo apt install -y nodejs npm
 ```
 
-## 2. gitbook安装
+## 2.gitbook安装
 ```Shell
 npm install gitbook-cli -g
 gitbook -V # (注意V一定要大写 大写 大写)
 ```
 ## 3.创建笔记
-### （1）gitbook初始化
+### 3.1 gitbook初始化
 * gitbook init会自动创建README.md和SUMMARY.md
 ```Shell
 cd home/Notes
 gitbook init
 ```
-![gitbook init](image/gitbook%20init.png)
-![Alt text](image/image-1.png)
+![gitbook初始化](image/gitbook初始化.png)
 
-### （2）修改SUMMARY文件
+### 3.2 修改SUMMARY文件
 ```markdown
 # Summary
 
@@ -35,9 +34,16 @@ gitbook init
     * [80C51指令集学习](80C51指令集学习/README.md)
 ```
 
-### （3）gitbook构建
+### 3.3 gitbook构建
 ```Shell
 gitbook init #根据Summary.md中创建笔记文件夹
 gitbook build #根据创建的文件夹内容生成网页
 ```
-![Alt text](image.png)
+![gitbook构建](image/gitbook构建.png)
+
+## 4.上传github
+### 4.1 创建分支
+#### （1）develop分支上存放gitbook的笔记
+#### （2）gh-pages分支上存放build生成_book中的内容
+* github会根据gh-pages最外层的index.html创建在线笔记
+![上传github](image/上传github.png)

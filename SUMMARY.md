@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [工具使用](Tools/README.md)
-    * [GitBook](GitBook/README.md)
+    * [GitBook](GitBook/GitBook工具学习.md)
 * [编程语言](Programming/README.md)
     * [C++](CPP/README.md)
     * [Java](Java/README.md)
