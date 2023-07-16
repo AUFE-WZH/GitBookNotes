@@ -74,3 +74,6 @@ gitbook build #根据创建的文件夹内容生成网页
 
 * 网站链接：[https://app.gitbook.com/](https://app.gitbook.com/)
 
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>编辑在线GitBook</p></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>push到git仓</p></figcaption></figure>
