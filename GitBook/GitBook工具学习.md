@@ -66,14 +66,12 @@ gitbook build #根据创建的文件夹内容生成网页
 
 * github会根据gh-pages最外层的index.html创建在线笔记
 
-&#x20;
 
-<figure><img src="image/上传github.png" alt=""><figcaption></figcaption></figure>
+![上传github](image/上传github.png)
 
 ## 5.在线编辑GitBook
 
 * 网站链接：[https://app.gitbook.com/](https://app.gitbook.com/)
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>编辑在线GitBook</p></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>push到git仓</p></figcaption></figure>
+![编辑在线GitBook](image/编辑在线GitBook.png)
+![push到git仓](image/push到git仓.png)
