@@ -1,0 +1,464 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Antlr4 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../80C51指令集学习/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Tools/">
+            
+                <a href="../Tools/">
+            
+                    
+                    工具使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../GitBook/GitBook工具学习.html">
+            
+                <a href="../GitBook/GitBook工具学习.html">
+            
+                    
+                    GitBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Programming/">
+            
+                <a href="../Programming/">
+            
+                    
+                    编程语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../CPP/">
+            
+                <a href="../CPP/">
+            
+                    
+                    C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Java/">
+            
+                <a href="../Java/">
+            
+                    
+                    Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Python/">
+            
+                <a href="../Python/">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../InstructionSet/">
+            
+                <a href="../InstructionSet/">
+            
+                    
+                    指令集
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../80C51指令集学习/">
+            
+                <a href="../80C51指令集学习/">
+            
+                    
+                    80C51指令集学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="Antlr4学习.html">
+            
+                <a href="Antlr4学习.html">
+            
+                    
+                    Antlr4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Antlr4</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="antlr4">Antlr4</h1>
+<h2 id="1idea&#x4E2D;antlr4&#x63D2;&#x4EF6;&#x5B89;&#x88C5;">1.IDEA&#x4E2D;Antlr4&#x63D2;&#x4EF6;&#x5B89;&#x88C5;</h2>
+<h3 id="11-&#x63D2;&#x4EF6;&#x5E02;&#x573A;&#x9009;&#x62E9;antlr4&#x63D2;&#x4EF6;">1.1 &#x63D2;&#x4EF6;&#x5E02;&#x573A;&#x9009;&#x62E9;Antlr4&#x63D2;&#x4EF6;</h3>
+<p><img src="image/&#x5165;&#x95E8;/IDEA&#x63D2;&#x4EF6;&#x5B89;&#x88C5;.png" alt="IDEA&#x63D2;&#x4EF6;&#x5B89;&#x88C5;"></p>
+<h3 id="12-antlr4&#x63D2;&#x4EF6;&#x5B89;&#x88C5;&#x6210;&#x529F;">1.2 Antlr4&#x63D2;&#x4EF6;&#x5B89;&#x88C5;&#x6210;&#x529F;</h3>
+<p><img src="image/&#x5165;&#x95E8;/Antlr4&#x63D2;&#x4EF6;&#x5B89;&#x88C5;&#x6210;&#x529F;.png" alt="Antlr4&#x63D2;&#x4EF6;&#x5B89;&#x88C5;&#x6210;&#x529F;"></p>
+<h3 id="13-&#x4E0B;&#x8F7D;&#x8BED;&#x6CD5;&#x6587;&#x4EF6;">1.3 &#x4E0B;&#x8F7D;&#x8BED;&#x6CD5;&#x6587;&#x4EF6;</h3>
+<h4 id="131-&#x8BED;&#x6CD5;&#x6587;&#x4EF6;&#x4ED3;&#x5E93;&#x8DEF;&#x5F84;">1.3.1 &#x8BED;&#x6CD5;&#x6587;&#x4EF6;&#x4ED3;&#x5E93;&#x8DEF;&#x5F84;</h4>
+<ul>
+<li><a href="https://github.com/antlr/grammars-v4" target="_blank">https://github.com/antlr/grammars-v4</a>
+<img src="image/&#x5165;&#x95E8;/antlr4&#x8BED;&#x6CD5;&#x4ED3;&#x5E93;.png" alt="antlr4&#x8BED;&#x6CD5;&#x4ED3;&#x5E93;"></li>
+</ul>
+<h4 id="132-java&#x9879;&#x76EE;&#x914D;&#x7F6E;">1.3.2 Java&#x9879;&#x76EE;&#x914D;&#x7F6E;</h4>
+<ul>
+<li>&#x6CE8;&#x610F;&#x9009;&#x62E9;antlr4&#x7248;&#x672C;&#x9700;&#x8981;&#x548C;&#x63D2;&#x4EF6;&#x7248;&#x672C;&#x4E00;&#x81F4;</li>
+<li>&#x6CE8;&#x610F;&#x5F53;&#x524D;&#x662F;JDK8&#x6240;&#x4EE5;&#x4E0D;&#x80FD;&#x9009;&#x62E9;&#x9AD8;&#x7248;&#x672C;Antlr4</li>
+</ul>
+<h5 id="&#xFF08;1&#xFF09;pomxml&#x914D;&#x7F6E;">&#xFF08;1&#xFF09;pom.xml&#x914D;&#x7F6E;</h5>
+<pre><code class="lang-xml"> <span class="hljs-tag">&lt;<span class="hljs-name">properties</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.source</span>&gt;</span>1.8<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.source</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.target</span>&gt;</span>1.8<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.target</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="hljs-tag">&lt;/<span class="hljs-name">project.build.sourceEncoding</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- ANTLR 4 &#x4ECE;4.10 &#x7248;&#x672C;&#x540E;&#x6700;&#x4F4E;&#x8981;&#x6C42;&#x7684;JDK&#x7248;&#x672C;&#x5347;&#x5230;&#x4E86;11&#xFF0C;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x8FD8;&#x60F3;&#x5728;JDK8&#x4E0B;&#x8FD0;&#x884C;&#x884C;ANTLR4&#x53EF;&#x4EE5;&#x53EA;&#x80FD;&#x4F7F;&#x7528;4.9.3 --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">antlr4.vesion</span>&gt;</span>4.10.1<span class="hljs-tag">&lt;/<span class="hljs-name">antlr4.vesion</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- &lt;antlr4.vesion&gt;4.11.1&lt;/antlr4.vesion&gt; --&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">properties</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>junit<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>junit<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>4.13.1<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>test<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- &#x589E;&#x52A0;antlr4 &#x8FD0;&#x884C;&#x65F6;&#x5E93;&#x4F9D;&#x8D56; --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.antlr<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>antlr4-runtime<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>${antlr4.vesion}<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span>
+</code></pre>
+<h5 id="&#xFF08;2&#xFF09;&#x9009;&#x62E9;java8&#x8BCD;&#x6CD5;&#x6587;&#x4EF6;&#x548C;&#x8BED;&#x6CD5;&#x6587;&#x4EF6;">&#xFF08;2&#xFF09;&#x9009;&#x62E9;Java8&#x8BCD;&#x6CD5;&#x6587;&#x4EF6;&#x548C;&#x8BED;&#x6CD5;&#x6587;&#x4EF6;</h5>
+<p><img src="image/&#x5165;&#x95E8;/Java8&#x8BCD;&#x6CD5;&#x6587;&#x4EF6;&#x548C;&#x8BED;&#x6CD5;&#x6587;&#x4EF6;.png" alt="Java8&#x8BCD;&#x6CD5;&#x6587;&#x4EF6;&#x548C;&#x8BED;&#x6CD5;&#x6587;&#x4EF6;">
+<img src="image/&#x5165;&#x95E8;/Java8&#x8BCD;&#x6CD5;&#x6587;&#x4EF6;&#x548C;&#x8BED;&#x6CD5;&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;.png" alt="Java8&#x8BCD;&#x6CD5;&#x6587;&#x4EF6;&#x548C;&#x8BED;&#x6CD5;&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;"></p>
+<h5 id="&#xFF08;3&#xFF09;&#x8865;&#x5145;">&#xFF08;3&#xFF09;&#x8865;&#x5145;</h5>
+<ul>
+<li>&#x5168;&#x91CF;Java8&#x8BED;&#x6CD5;&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;
+<img src="image/&#x5165;&#x95E8;/&#x5168;&#x91CF;Java8&#x8BED;&#x6CD5;&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;.png" alt="&#x5168;&#x91CF;Java8&#x8BED;&#x6CD5;&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;"></li>
+</ul>
+<h5 id="&#xFF08;4&#xFF09;&#x914D;&#x7F6E;antlr&#x63D2;&#x4EF6;">&#xFF08;4&#xFF09;&#x914D;&#x7F6E;Antlr&#x63D2;&#x4EF6;</h5>
+<ul>
+<li>&#x5148;&#x914D;&#x7F6E;&#x518D;&#x751F;&#x6210;
+<img src="image/&#x5165;&#x95E8;/&#x914D;&#x7F6E;Antlr&#x63D2;&#x4EF6;.png" alt="&#x914D;&#x7F6E;Antlr&#x63D2;&#x4EF6;">
+<img src="image/&#x5165;&#x95E8;/Antlr&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7ED3;&#x679C;.png" alt="Antlr&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7ED3;&#x679C;"></li>
+</ul>
+<h4 id="133-&#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#x6D4B;&#x8BD5;">1.3.3 &#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#x6D4B;&#x8BD5;</h4>
+<p><img src="image/&#x5165;&#x95E8;/&#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#x6D4B;&#x8BD5;.png" alt="&#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#x6D4B;&#x8BD5;"></p>
+<h3 id="14-&#x624B;&#x5199;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;">1.4 &#x624B;&#x5199;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;</h3>
+<h4 id="141-&#x91CD;&#x5199;baselistener&#x83B7;&#x5F97;&#x7C7B;&#x7684;&#x4FEE;&#x9970;&#x7B26;">1.4.1 &#x91CD;&#x5199;BaseListener&#x83B7;&#x5F97;&#x7C7B;&#x7684;&#x4FEE;&#x9970;&#x7B26;</h4>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Java8ParserTestListener</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Java8ParserBaseListener</span> </span>{
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">enterNormalClassDeclaration</span><span class="hljs-params">(Java8Parser.NormalClassDeclarationContext ctx)</span> </span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; ctx.getChildCount(); i++) {
+            ParseTree child = ctx.getChild(i);
+            <span class="hljs-keyword">if</span> (child <span class="hljs-keyword">instanceof</span> Java8Parser.ClassModifierContext) {
+                Java8Parser.ClassModifierContext classModifierContext = (Java8Parser.ClassModifierContext) child;
+                <span class="hljs-keyword">for</span> (ParseTree parseTree : classModifierContext.children) {
+                    System.out.println(parseTree.getClass());
+                    <span class="hljs-keyword">if</span> (parseTree <span class="hljs-keyword">instanceof</span> TerminalNode) {
+                        System.out.println(parseTree.getText());
+                    }
+                }
+            }
+        }
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">exitNormalClassDeclaration</span><span class="hljs-params">(Java8Parser.NormalClassDeclarationContext ctx)</span> </span>{
+    }
+}
+</code></pre>
+<h4 id="142-&#x624B;&#x5199;&#x4E3B;&#x51FD;&#x6570;">1.4.2 &#x624B;&#x5199;&#x4E3B;&#x51FD;&#x6570;</h4>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyJavaTest</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> IOException </span>{
+        InputStream inputStream = Files.newInputStream(Paths.get(<span class="hljs-string">&quot;.\\src\\other\\helloworld.java&quot;</span>));
+
+        <span class="hljs-comment">//&#x65B0;&#x5EFA;CharStream,&#x4ECE;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x8BFB;&#x53D6;&#x6570;&#x636E;</span>
+        ANTLRInputStream input = <span class="hljs-keyword">new</span> ANTLRInputStream(inputStream);
+        <span class="hljs-comment">//&#x65B0;&#x5EFA;&#x8BCD;&#x6CD5;&#x5206;&#x6790;&#x5668;,&#x5904;&#x7406;&#x8F93;&#x5165;&#x7684;CharStream</span>
+        Java8Lexer lexer = <span class="hljs-keyword">new</span> Java8Lexer(input);
+        <span class="hljs-comment">//&#x65B0;&#x5EFA;&#x8BCD;&#x6CD5;&#x7B26;&#x53F7;&#x7F13;&#x51B2;&#x533A;,&#x5B58;&#x50A8;&#x8BCD;&#x6CD5;&#x5206;&#x6790;&#x5668;&#x751F;&#x6210;&#x7684;&#x8BCD;&#x6CD5;&#x7B26;&#x53F7;</span>
+        CommonTokenStream tokens = <span class="hljs-keyword">new</span> CommonTokenStream(lexer);
+        <span class="hljs-comment">//&#x65B0;&#x5EFA;&#x8BED;&#x6CD5;&#x5206;&#x6790;&#x5668;,&#x5904;&#x7406;&#x8BCD;&#x6CD5;&#x7B26;&#x53F7;&#x7F13;&#x51B2;&#x533A;&#x5185;&#x5BB9;</span>
+        Java8Parser parse = <span class="hljs-keyword">new</span> Java8Parser(tokens);
+        <span class="hljs-comment">//&#x9488;&#x5BF9;normalClassDeclaration&#x89C4;&#x5219;,&#x5F00;&#x59CB;&#x8BED;&#x6CD5;&#x5206;&#x6790;</span>
+        ParseTree tree = parse.normalClassDeclaration();
+        <span class="hljs-comment">//&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x80FD;&#x591F;&#x89E6;&#x53D1;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x8BED;&#x6CD5;&#x5206;&#x6790;&#x6811;&#x904D;&#x5386;&#x5668;</span>
+        ParseTreeWalker walker = <span class="hljs-keyword">new</span> ParseTreeWalker();
+        <span class="hljs-comment">//&#x904D;&#x5386;&#x8BED;&#x6CD5;&#x5206;&#x6790;&#x8FC7;&#x7A0B;&#x4E2D;&#x751F;&#x6210;&#x7684;&#x8BED;&#x6CD5;&#x5206;&#x6790;&#x6811;,&#x89E6;&#x53D1;&#x56DE;&#x8C03;</span>
+        walker.walk(<span class="hljs-keyword">new</span> Java8ParserTestListener(), tree);
+        System.out.println();
+    }
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../80C51指令集学习/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 80C51指令集学习">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Antlr4","level":"1.5","depth":1,"previous":{"title":"80C51指令集学习","level":"1.4.1","depth":2,"path":"80C51指令集学习/README.md","ref":"80C51指令集学习/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Antlr4/Antlr4学习.md","mtime":"2023-07-17T16:13:47.787Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-07-17T16:14:06.039Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
