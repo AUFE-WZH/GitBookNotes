@@ -8,6 +8,8 @@
     * [Java](Java/README.md)
     * [Python](Python/README.md)
 * [指令集](InstructionSet/README.md)
+    * [汇编指令集入门](汇编指令集入门/汇编指令集入门.md)
+    * [内联汇编入门](内联汇编入门/内联汇编入门.md)
     * [80C51指令集学习](80C51指令集学习/README.md)
 * [Antlr4](Antlr4/Antlr4学习.md)
 
