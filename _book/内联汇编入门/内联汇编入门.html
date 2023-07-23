@@ -343,14 +343,14 @@
 <pre><code class="lang-assmble">asm(&quot;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&quot;);
 
 &#x793A;&#x4F8B;1&#xFF1A;
-asm(&quot;movl %ecx %eax&quot;); /* &#x5C06; ecx &#x5BC4;&#x5B58;&#x5668;&#x7684;&#x5185;&#x5BB9;&#x79FB;&#x81F3; eax  */
-__asm__(&quot;movb %bh (%eax)&quot;); /* &#x5C06; bh &#x7684;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x6570;&#x636E; &#x79FB;&#x81F3; eax &#x5BC4;&#x5B58;&#x5668;&#x6307;&#x5411;&#x7684;&#x5185;&#x5B58; */
+asm(&quot;movl %%ecx %%eax&quot;); /* &#x5C06; ecx &#x5BC4;&#x5B58;&#x5668;&#x7684;&#x5185;&#x5BB9;&#x79FB;&#x81F3; eax  */
+__asm__(&quot;movb %%bh (%%eax)&quot;); /* &#x5C06; bh &#x7684;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x6570;&#x636E; &#x79FB;&#x81F3; eax &#x5BC4;&#x5B58;&#x5668;&#x6307;&#x5411;&#x7684;&#x5185;&#x5B58; */
 
 &#x793A;&#x4F8B;2&#xFF1A;
-__asm__ ( &quot;movl %eax, %ebx\n\t&quot;
-          &quot;movl $56, %esi\n\t&quot;
-          &quot;movl %ecx, $label(%edx,%ebx,$4)\n\t&quot;
-          &quot;movb %ah, (%ebx)&quot;);
+__asm__ ( &quot;movl %%eax, %%ebx\n\t&quot;
+          &quot;movl $56, %%esi\n\t&quot;
+          &quot;movl %%ecx, $label(%%edx,%%ebx,$4)\n\t&quot;
+          &quot;movb %%ah, (%%ebx)&quot;);
 </code></pre>
 <h5 id="&#xFF08;3&#xFF09;gcc&#x5B98;&#x65B9;&#x63CF;&#x8FF0;">&#xFF08;3&#xFF09;GCC&#x5B98;&#x65B9;&#x63CF;&#x8FF0;</h5>
 <pre><code class="lang-assmble">1.&#x8BED;&#x6CD5;&#xFF1A;
@@ -390,8 +390,9 @@ asm asm-qualifiers ( AssemblerTemplate
 <h5 id="&#xFF08;1&#xFF09;&#x89E3;&#x6790;">&#xFF08;1&#xFF09;&#x89E3;&#x6790;</h5>
 <ul>
 <li>&#x8BE5;&#x5185;&#x8054;&#x6C47;&#x7F16;&#x4F5C;&#x7528;&#xFF1A;&#x5C06;a&#x7684;&#x503C;&#x8D4B;&#x7ED9;b<ul>
-<li>%0&#xFF1A;&#x8868;&#x793A;b</li>
-<li>%1&#xFF1A;&#x8868;&#x793A;a</li>
+<li>%0&#xFF1A;&#x5360;&#x4F4D;&#x7B26;&#x8868;&#x793A;b</li>
+<li>%1&#xFF1A;&#x5360;&#x4F4D;&#x7B26;&#x8868;&#x793A;a</li>
+<li>%%eax&#xFF1A;&#x8868;&#x793A;eax&#x5BC4;&#x5B58;&#x5668;&#xFF0C;&#x4F7F;&#x7528;&#x4E24;&#x4E2A;%%&#x4E0E;&#x5360;&#x4F4D;&#x7B26;&#x533A;&#x5206;</li>
 <li>&quot;=r&quot;&#xFF1A;&#x5176;&#x4E2D;r&#x8868;&#x793A;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x5BC4;&#x5B58;&#x5668;&#x5B58;&#x50A8;&#x64CD;&#x4F5C;&#x6570;&#xFF0C;=&#x53F7;&#x8868;&#x793A;&#x53EA;&#x8BFB;&#x7684;&#x64CD;&#x4F5C;&#x6570;</li>
 <li>&#x7B2C;&#x4E09;&#x4E2A;&#x5192;&#x53F7;&#x4E4B;&#x540E;&#x7684;&quot;%eax&quot;&#xFF1A;&#x8868;&#x793A;&#x4FEE;&#x6539;&#x7684;eax&#x5BC4;&#x5B58;&#x5668;&#xFF0C;&#x5728;&#x5904;&#x7406;&#x5185;&#x8054;&#x6C47;&#x7F16;&#x4E4B;&#x524D;&#x7F16;&#x8BD1;&#x5668;&#x73B0;&#x5C06;eax&#x5BC4;&#x5B58;&#x5668;&#x5165;&#x6808;&#xFF0C;&#x6267;&#x884C;&#x5B8C;&#x5185;&#x8054;&#x6C47;&#x7F16;&#x4E4B;&#x540E;&#x518D;&#x5C06;&#x503C;&#x51FA;&#x6808;&#x653E;&#x5165;eax&#x4E2D;&#xFF0C;&#x4FDD;&#x8BC1;&#x7A0B;&#x5E8F;&#x4E0D;&#x4F1A;&#x51FA;&#x9519;&#x3002;</li>
 </ul>
@@ -454,7 +455,7 @@ asm (&quot;movl %1, %%eax;
 </code></pre>
 </li>
 </ul>
-<h5 id="&#x6CE8;&#x610F;">&#x6CE8;&#x610F;</h5>
+<h5 id="&#xFF08;4&#xFF09;&#x6CE8;&#x610F;">&#xFF08;4&#xFF09;&#x6CE8;&#x610F;</h5>
 <ul>
 <li>&#x4E0A;&#x8FF0;&#x4E09;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#x5E76;&#x6CA1;&#x6709;&#x5C06;ecx&#x653E;&#x5230;&#x7834;&#x574F;&#x548C;&#x6682;&#x5B58;&#x7684;&#x5BC4;&#x5B58;&#x5668;&#x5217;&#x8868;&#x4E2D;<ul>
 <li>&#x7531;&#x4E8E;&#x524D;&#x4E24;&#x4E2A;&#x4F8B;&#x5B50;GCC&#x81EA;&#x5DF1;&#x51B3;&#x5B9A;&#x5BC4;&#x5B58;&#x5668;&#xFF0C;&#x5219;&#x5B83;&#x77E5;&#x9053;&#x4FEE;&#x6539;&#x7684;&#x5BC4;&#x5B58;&#x5668;&#x662F;&#x54EA;&#x4E00;&#x4E2A;&#xFF0C;&#x8FD9;&#x6837;&#x5B83;&#x81EA;&#x5DF1;&#x538B;&#x6808;&#x548C;&#x51FA;&#x6808;&#x8FD8;&#x539F;</li>
@@ -545,6 +546,17 @@ asm (&quot;movl %1, %%eax;
     &quot;u&quot; : &#x7B2C;&#x4E8C;&#x4E2A;&#x6D6E;&#x70B9;&#x5BC4;&#x5B58;&#x5668;
     &quot;A&quot; : &#x6307;&#x5B9A; &quot;a&quot; &#x6216; &quot;d&quot; &#x5BC4;&#x5B58;&#x5668;&#x3002;&#x8FD9;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x60F3;&#x8981;&#x8FD4;&#x56DE; 64 &#x4F4D;&#x6574;&#x5F62;&#x6570;&#xFF0C;&#x4F7F;&#x7528; &quot;d&quot; &#x5BC4;&#x5B58;&#x5668;&#x4FDD;&#x5B58;&#x6700;&#x9AD8;&#x6709;&#x6548;&#x4F4D;&#x548C; &quot;a&quot; &#x5BC4;&#x5B58;&#x5668;&#x4FDD;&#x5B58;&#x6700;&#x4F4E;&#x6709;&#x6548;&#x4F4D;&#x3002;
 </code></pre>
+<h2 id="4&#x603B;&#x7ED3;">4.&#x603B;&#x7ED3;</h2>
+<h4 id="41-&#x8F93;&#x51FA;&#x90E8;&#x5206;&#xFF08;asm&#x7ED9;c&#x7684;&#x503C;&#xFF09;">4.1 &#x8F93;&#x51FA;&#x90E8;&#x5206;&#xFF08;asm&#x7ED9;C&#x7684;&#x503C;&#xFF09;</h4>
+<p><img src="image/&#x8F93;&#x51FA;&#x90E8;&#x5206;.png" alt="&#x8F93;&#x51FA;&#x90E8;&#x5206;"></p>
+<h4 id="42-&#x8F93;&#x5165;&#x90E8;&#x5206;&#xFF08;c&#x7ED9;asm&#x7684;&#x503C;&#xFF09;">4.2 &#x8F93;&#x5165;&#x90E8;&#x5206;&#xFF08;C&#x7ED9;asm&#x7684;&#x503C;&#xFF09;</h4>
+<p><img src="image/&#x8F93;&#x5165;&#x90E8;&#x5206;.png" alt="&#x8F93;&#x5165;&#x90E8;&#x5206;"></p>
+<h4 id="43-&#x6CE8;&#x610F;">4.3 &#x6CE8;&#x610F;</h4>
+<p><img src="image/&#x6CE8;&#x610F;.png" alt="&#x6CE8;&#x610F;"></p>
+<h4 id="44-&#x4F8B;&#x5B50;">4.4 &#x4F8B;&#x5B50;</h4>
+<p><img src="image/&#x65E0;&#x53C2;&#x6570;&#x65E0;&#x8FD4;&#x56DE;&#x503C;.png" alt="&#x65E0;&#x53C2;&#x6570;&#x65E0;&#x8FD4;&#x56DE;&#x503C;">
+<img src="image/&#x6709;&#x53C2;&#x6570;&#x6709;&#x8FD4;&#x56DE;&#x503C;1.png" alt="&#x6709;&#x53C2;&#x6570;&#x6709;&#x8FD4;&#x56DE;&#x503C;1">
+<img src="image/&#x6709;&#x53C2;&#x6570;&#x6709;&#x8FD4;&#x56DE;&#x503C;2.png" alt="&#x6709;&#x53C2;&#x6570;&#x6709;&#x8FD4;&#x56DE;&#x503C;2"></p>
 
                                 
                                 </section>
@@ -588,7 +600,7 @@ asm (&quot;movl %1, %%eax;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"内联汇编入门","level":"1.4.2","depth":2,"next":{"title":"80C51指令集学习","level":"1.4.3","depth":2,"path":"80C51指令集学习/README.md","ref":"80C51指令集学习/README.md","articles":[]},"previous":{"title":"汇编指令集入门","level":"1.4.1","depth":2,"path":"汇编指令集入门/汇编指令集入门.md","ref":"汇编指令集入门/汇编指令集入门.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"内联汇编入门/内联汇编入门.md","mtime":"2023-07-23T13:54:51.364Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-07-23T13:58:06.295Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"内联汇编入门","level":"1.4.2","depth":2,"next":{"title":"80C51指令集学习","level":"1.4.3","depth":2,"path":"80C51指令集学习/README.md","ref":"80C51指令集学习/README.md","articles":[]},"previous":{"title":"汇编指令集入门","level":"1.4.1","depth":2,"path":"汇编指令集入门/汇编指令集入门.md","ref":"汇编指令集入门/汇编指令集入门.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"内联汇编入门/内联汇编入门.md","mtime":"2023-07-23T14:49:57.534Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-07-23T14:50:12.070Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
