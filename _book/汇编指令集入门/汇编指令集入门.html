@@ -352,7 +352,7 @@
 </tr>
 </tbody>
 </table>
-<h4 id="123-&#x5E38;&#x6570;&#x7ACB;&#x5373;&#x6570;&#x7684;&#x683C;&#x5F0F;">1.2.3 &#x5E38;&#x6570;/&#x7ACB;&#x5373;&#x6570;&#x7684;&#x683C;&#x5F0F;</h4>
+<h4 id="123-&#x7ACB;&#x5373;&#x6570;&#x7684;&#x683C;&#x5F0F;">1.2.3 &#x7ACB;&#x5373;&#x6570;&#x7684;&#x683C;&#x5F0F;</h4>
 <table>
 <thead>
 <tr>
@@ -377,13 +377,24 @@
 <h4 id="124-&#x5185;&#x5B58;&#x5BFB;&#x5740;&#x683C;&#x5F0F;">1.2.4 &#x5185;&#x5B58;&#x5BFB;&#x5740;&#x683C;&#x5F0F;</h4>
 <ul>
 <li>AT&amp;T&#x4F7F;&#x7528;&#x5C0F;&#x62EC;&#x53F7;()&#xFF0C;Intel&#x8BED;&#x6CD5;&#x4F7F;&#x7528;&#x4E2D;&#x62EC;&#x53F7;[]<ul>
-<li>&#x4E24;&#x79CD;&#x5BFB;&#x5740;&#x7684;&#x5B9E;&#x9645;&#x7ED3;&#x679C;&#x90FD;&#x5E94;&#x8BE5;&#x662F;:imm32 + basepointer + indexpointer<em>indexscale
-| AT&amp;T         | Intel     | 
-| :-----       | :----     | 
-| imm32(basepointer,indexpointer,indexscale) | [basepointer + indexpointer</em>indexscale + imm32) | </li>
+<li>&#x4E24;&#x79CD;&#x5BFB;&#x5740;&#x7684;&#x5B9E;&#x9645;&#x7ED3;&#x679C;&#x90FD;&#x5E94;&#x8BE5;&#x662F;:imm32 + basepointer + indexpointer*indexscale</li>
 </ul>
 </li>
 </ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">AT&amp;T</th>
+<th style="text-align:left">Intel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">imm32(basepointer,indexpointer,indexscale)</td>
+<td style="text-align:left">[basepointer + indexpointer*indexscale + imm32)</td>
+</tr>
+</tbody>
+</table>
 <h4 id="125-&#x64CD;&#x4F5C;&#x6570;&#x957F;&#x5EA6;&#x6807;&#x8BC6;">1.2.5 &#x64CD;&#x4F5C;&#x6570;&#x957F;&#x5EA6;&#x6807;&#x8BC6;</h4>
 <table>
 <thead>
@@ -675,7 +686,7 @@ movl  6&#xFF08;%ebx&#xFF0C;%eax&#xFF0C;4&#xFF09;, %ecx   #&#x53D8;&#x5740;&#x5BF
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"汇编指令集入门","level":"1.4.1","depth":2,"next":{"title":"内联汇编入门","level":"1.4.2","depth":2,"path":"内联汇编入门/内联汇编入门.md","ref":"内联汇编入门/内联汇编入门.md","articles":[]},"previous":{"title":"指令集","level":"1.4","depth":1,"path":"InstructionSet/README.md","ref":"InstructionSet/README.md","articles":[{"title":"汇编指令集入门","level":"1.4.1","depth":2,"path":"汇编指令集入门/汇编指令集入门.md","ref":"汇编指令集入门/汇编指令集入门.md","articles":[]},{"title":"内联汇编入门","level":"1.4.2","depth":2,"path":"内联汇编入门/内联汇编入门.md","ref":"内联汇编入门/内联汇编入门.md","articles":[]},{"title":"80C51指令集学习","level":"1.4.3","depth":2,"path":"80C51指令集学习/README.md","ref":"80C51指令集学习/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"汇编指令集入门/汇编指令集入门.md","mtime":"2023-07-19T16:35:01.650Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-07-19T16:36:44.152Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"汇编指令集入门","level":"1.4.1","depth":2,"next":{"title":"内联汇编入门","level":"1.4.2","depth":2,"path":"内联汇编入门/内联汇编入门.md","ref":"内联汇编入门/内联汇编入门.md","articles":[]},"previous":{"title":"指令集","level":"1.4","depth":1,"path":"InstructionSet/README.md","ref":"InstructionSet/README.md","articles":[{"title":"汇编指令集入门","level":"1.4.1","depth":2,"path":"汇编指令集入门/汇编指令集入门.md","ref":"汇编指令集入门/汇编指令集入门.md","articles":[]},{"title":"内联汇编入门","level":"1.4.2","depth":2,"path":"内联汇编入门/内联汇编入门.md","ref":"内联汇编入门/内联汇编入门.md","articles":[]},{"title":"80C51指令集学习","level":"1.4.3","depth":2,"path":"80C51指令集学习/README.md","ref":"80C51指令集学习/README.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"汇编指令集入门/汇编指令集入门.md","mtime":"2023-07-23T08:10:41.474Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-07-23T13:58:06.295Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
