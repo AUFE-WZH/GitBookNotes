@@ -12,4 +12,6 @@
     * [内联汇编入门](内联汇编入门/内联汇编入门.md)
     * [80C51指令集学习](80C51指令集学习/README.md)
 * [Antlr4](Antlr4/Antlr4学习.md)
+* [VSCode插件开发](VSCode插件开发/VSCode插件开发大纲.md)
+    * [VSCode插件开发入门](VSCode插件开发/VSCode插件开发入门/入门1.md)
 
