@@ -4,6 +4,7 @@
 * [工具使用](Tools/README.md)
     * [GitBook](GitBook/GitBook工具学习.md)
 * [编程语言](Programming/README.md)
+    * [C语言拾遗](C语言/C语言拾遗.md)
     * [C++](CPP/README.md)
     * [Java](Java/README.md)
     * [Python](Python/README.md)
