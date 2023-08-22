@@ -1,0 +1,801 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>程序分析实战入门 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="S2.程序分析实战实验篇初步.html" />
+    
+    
+    <link rel="prev" href="6.程序分析理论讲解.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Tools/">
+            
+                <a href="../Tools/">
+            
+                    
+                    工具使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../GitBook/GitBook工具学习.html">
+            
+                <a href="../GitBook/GitBook工具学习.html">
+            
+                    
+                    GitBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Programming/">
+            
+                <a href="../Programming/">
+            
+                    
+                    编程语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../C语言/C语言拾遗.html">
+            
+                <a href="../C语言/C语言拾遗.html">
+            
+                    
+                    C语言拾遗
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../CPP/">
+            
+                <a href="../CPP/">
+            
+                    
+                    C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Java/">
+            
+                <a href="../Java/">
+            
+                    
+                    Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Python/">
+            
+                <a href="../Python/">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../InstructionSet/">
+            
+                <a href="../InstructionSet/">
+            
+                    
+                    指令集
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../汇编指令集入门/汇编指令集入门.html">
+            
+                <a href="../汇编指令集入门/汇编指令集入门.html">
+            
+                    
+                    汇编指令集入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../内联汇编入门/内联汇编入门.html">
+            
+                <a href="../内联汇编入门/内联汇编入门.html">
+            
+                    
+                    内联汇编入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../80C51指令集学习/">
+            
+                <a href="../80C51指令集学习/">
+            
+                    
+                    80C51指令集学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Antlr4/Antlr4学习.html">
+            
+                <a href="../Antlr4/Antlr4学习.html">
+            
+                    
+                    Antlr4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../VSCode插件开发/VSCode插件开发大纲.html">
+            
+                <a href="../VSCode插件开发/VSCode插件开发大纲.html">
+            
+                    
+                    VSCode插件开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../VSCode插件开发/VSCode插件开发入门/入门1.html">
+            
+                <a href="../VSCode插件开发/VSCode插件开发入门/入门1.html">
+            
+                    
+                    VSCode插件开发入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="0.程序分析学习大纲.html">
+            
+                <a href="0.程序分析学习大纲.html">
+            
+                    
+                    程序分析学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="静态程序分析框架Tai-e设计之道.html">
+            
+                <a href="静态程序分析框架Tai-e设计之道.html">
+            
+                    
+                    静态程序分析框架Tai-e设计之道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="1.程序分析基础知识学习.html">
+            
+                <a href="1.程序分析基础知识学习.html">
+            
+                    
+                    程序分析基础知识学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="2.可达赋值分析.html">
+            
+                <a href="2.可达赋值分析.html">
+            
+                    
+                    可达赋值分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="3.存活变量分析.html">
+            
+                <a href="3.存活变量分析.html">
+            
+                    
+                    存活变量分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="4.可用表达式传播分析.html">
+            
+                <a href="4.可用表达式传播分析.html">
+            
+                    
+                    可用表达式传播分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="5.三种分析总结.html">
+            
+                <a href="5.三种分析总结.html">
+            
+                    
+                    三种分析总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="6.程序分析理论讲解.html">
+            
+                <a href="6.程序分析理论讲解.html">
+            
+                    
+                    程序分析理论讲解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.8" data-path="S1.程序分析实战入门.html">
+            
+                <a href="S1.程序分析实战入门.html">
+            
+                    
+                    程序分析实战入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="S2.程序分析实战实验篇初步.html">
+            
+                <a href="S2.程序分析实战实验篇初步.html">
+            
+                    
+                    程序分析实战实验篇初步
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../CSAPP学习/0.CSAPP学习大纲.html">
+            
+                <a href="../CSAPP学习/0.CSAPP学习大纲.html">
+            
+                    
+                    CSAPP学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../CSAPP学习/1.CSAPP实验.html">
+            
+                <a href="../CSAPP学习/1.CSAPP实验.html">
+            
+                    
+                    CSAPP实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../CSAPP学习/2.CSAPP读书笔记.html">
+            
+                <a href="../CSAPP学习/2.CSAPP读书笔记.html">
+            
+                    
+                    CSAPP读书笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >程序分析实战入门</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7A0B;&#x5E8F;&#x5206;&#x6790;&#x5B9E;&#x6218;&#x5165;&#x95E8;">&#x7A0B;&#x5E8F;&#x5206;&#x6790;&#x5B9E;&#x6218;&#x5165;&#x95E8;</h1>
+<h2 id="1-&#x5B9E;&#x9A8C;&#x8D44;&#x6599;&#x6765;&#x6E90;">1. &#x5B9E;&#x9A8C;&#x8D44;&#x6599;&#x6765;&#x6E90;</h2>
+<ul>
+<li>&#x5B9E;&#x9A8C;&#x624B;&#x518C;&#xFF1A;<a href="https://tai-e.pascal-lab.net/lectures.html" target="_blank">https://tai-e.pascal-lab.net/lectures.html</a></li>
+<li>&#x5B9E;&#x9A8C;OJ&#xFF1A;<a href="https://oj.pascal-lab.net/problem" target="_blank">https://oj.pascal-lab.net/problem</a></li>
+<li>&#x53C2;&#x8003;&#x5B9E;&#x9A8C;&#x4F5C;&#x4E1A;&#xFF1A;<a href="https://github.com/ikitsuchi/tai-e-programming-assignments" target="_blank">https://github.com/ikitsuchi/tai-e-programming-assignments</a></li>
+</ul>
+<h2 id="2&#x5B9E;&#x9A8C;&#x73AF;&#x5883;&#x642D;&#x5EFA;">2.&#x5B9E;&#x9A8C;&#x73AF;&#x5883;&#x642D;&#x5EFA;</h2>
+<ul>
+<li>&#x6309;&#x7167;&#x624B;&#x518C;&#x914D;&#x7F6E;&#x642D;&#x5EFA;&#x5373;&#x53EF;&#xFF1A;<a href="https://tai-e.pascal-lab.net/intro/setup.html" target="_blank">https://tai-e.pascal-lab.net/intro/setup.html</a></li>
+</ul>
+<h2 id="3&#x81EA;&#x5236;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;">3.&#x81EA;&#x5236;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;</h2>
+<h3 id="31-&#x603B;&#x89C8;">3.1 &#x603B;&#x89C8;</h3>
+<p><img src="image/&#x5B9E;&#x6218;/&#x81EA;&#x5236;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x603B;&#x89C8;.png" alt="&#x81EA;&#x5236;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x603B;&#x89C8;"></p>
+<h3 id="32-&#x4FEE;&#x6539;assigment&#x6E90;&#x7801;">3.2 &#x4FEE;&#x6539;Assigment&#x6E90;&#x7801;</h3>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Assignment</span> </span>{
+
+    <span class="hljs-comment">// &#x81EA;&#x5B9A;&#x4E49;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testArray2</span><span class="hljs-params">()</span> </span>{
+        String arg = <span class="hljs-string">&quot;-cp src/test/resources/dataflow/livevar -m Array2&quot;</span>;
+        String[] argArray = arg.split(<span class="hljs-string">&quot;\\s+&quot;</span>);
+        List&lt;String&gt; argList = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        Collections.addAll(argList, <span class="hljs-string">&quot;-pp&quot;</span>, <span class="hljs-string">&quot;-p&quot;</span>, <span class="hljs-string">&quot;plan.yml&quot;</span>);
+        Collections.addAll(argList, argArray);
+        Main.main(argList.toArray(<span class="hljs-keyword">new</span> String[<span class="hljs-number">0</span>]));
+    }
+
+    <span class="hljs-comment">// &#x81EA;&#x5B9A;&#x4E49;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testBranch2</span><span class="hljs-params">()</span> </span>{
+        String arg = <span class="hljs-string">&quot;-cp src/test/resources/dataflow/livevar -m Branch2&quot;</span>;
+        String[] argArray = arg.split(<span class="hljs-string">&quot;\\s+&quot;</span>);
+        List&lt;String&gt; argList = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        Collections.addAll(argList, <span class="hljs-string">&quot;-pp&quot;</span>, <span class="hljs-string">&quot;-p&quot;</span>, <span class="hljs-string">&quot;plan.yml&quot;</span>);
+        Collections.addAll(argList, argArray);
+        Main.main(argList.toArray(<span class="hljs-keyword">new</span> String[<span class="hljs-number">0</span>]));
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">if</span> (args.length &gt; <span class="hljs-number">0</span>) {
+            List&lt;String&gt; argList = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+            Collections.addAll(argList, <span class="hljs-string">&quot;-pp&quot;</span>, <span class="hljs-string">&quot;-p&quot;</span>, <span class="hljs-string">&quot;plan.yml&quot;</span>);
+            Collections.addAll(argList, args);
+            Main.main(argList.toArray(<span class="hljs-keyword">new</span> String[<span class="hljs-number">0</span>]));
+        } <span class="hljs-keyword">else</span> {
+            System.out.println(<span class="hljs-string">&quot;Usage: -cp &lt;CLASS_PATH&gt; -m &lt;CLASS_NAME&gt;&quot;</span>);
+            System.out.println(<span class="hljs-string">&quot;-cp src/test/resources/dataflow/livevar -m Assign&quot;</span>);
+
+            Assignment assignment = <span class="hljs-keyword">new</span> Assignment();
+            assignment.testBranch2();
+        }
+    }
+}
+</code></pre>
+<h3 id="33-&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;">3.3 &#x6D4B;&#x8BD5;&#x4EE3;&#x7801;</h3>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Branch2</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">fun</span><span class="hljs-params">(<span class="hljs-keyword">int</span> flag, <span class="hljs-keyword">int</span> a)</span> </span>{
+        <span class="hljs-keyword">int</span> x;
+        <span class="hljs-keyword">if</span> (flag == <span class="hljs-number">3</span>) {
+            x = -<span class="hljs-number">1</span>;
+        } <span class="hljs-keyword">else</span> {
+            x = <span class="hljs-number">1</span>;
+        }
+        <span class="hljs-keyword">int</span> y = x * a;
+        <span class="hljs-keyword">return</span> y - <span class="hljs-number">1</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">fun3</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">while</span>(<span class="hljs-keyword">true</span>) {}
+    }
+}
+</code></pre>
+<h3 id="34-&#x6267;&#x884C;&#x7ED3;&#x679C;">3.4 &#x6267;&#x884C;&#x7ED3;&#x679C;</h3>
+<pre><code class="lang-shell">Usage: -cp &lt;CLASS_PATH&gt; -m &lt;CLASS_NAME&gt;
+-cp src/test/resources/dataflow/livevar -m Assign
+Tai-e starts ...
+Writing options to output\options.yml
+WorldBuilder starts ...
+Warning: main class &apos;Branch2&apos; does not have main(String[]) method!
+9840 classes with 97790 methods in the world
+WorldBuilder finishes, elapsed time: 4.92s
+throw starts ...
+1 classes in scope (app) of class analyses
+3 methods in scope (app) of method analyses
+throw finishes, elapsed time: 0.06s
+cfg starts ...
+cfg finishes, elapsed time: 0.04s
+livevar starts ...
+livevar finishes, elapsed time: 0.01s
+process-result starts ...
+-------------------- &lt;Branch2: void &lt;init&gt;()&gt; (livevar) --------------------
+[0@L1] invokespecial %this.&lt;java.lang.Object: void &lt;init&gt;()&gt;(); []
+[1@L1] return; []
+
+-------------------- &lt;Branch2: int fun(int,int)&gt; (livevar) --------------------
+[0@L4] %intconst0 = 3; [%intconst0, a, flag]
+[1@L4] if (flag == %intconst0) goto 3; [a]
+[2@L4] goto 6; [a]
+[3@L4] nop; [a]
+[4@L5] x = -1; [a, x]
+[5@L4] goto 8; [a, x]
+[6@L4] nop; [a]
+[7@L7] x = 1; [a, x]
+[8@L7] nop; [a, x]
+[9@L9] y = x * a; [y]
+[10@L9] %intconst1 = 1; [%intconst1, y]
+[11@L9] temp$3 = y - %intconst1; [temp$3]
+[12@L10] return temp$3; []
+
+-------------------- &lt;Branch2: void fun3()&gt; (livevar) --------------------
+[0@L13] nop; []
+[1@L14] goto 2; []
+[2@L14] nop; []
+[3@L14] goto 0; []
+[4@L14] return; []
+
+process-result finishes, elapsed time: 0.02s
+Tai-e finishes, elapsed time: 5.35s
+
+Process finished with exit code 0
+</code></pre>
+<h2 id="4&#x5355;&#x5143;&#x6D4B;&#x8BD5;">4.&#x5355;&#x5143;&#x6D4B;&#x8BD5;</h2>
+<h3 id="41-&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x603B;&#x89C8;">4.1 &#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x603B;&#x89C8;</h3>
+<p><img src="image/&#x5B9E;&#x6218;/&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x603B;&#x89C8;.png" alt="&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x603B;&#x89C8;"></p>
+<h3 id="42-&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;">4.2 &#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;</h3>
+<ul>
+<li>&#x76F4;&#x63A5;&#x6267;&#x884C;testAll&#x6D4B;&#x8BD5;&#x6240;&#x6709;&#x7528;&#x4F8B;</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LiveVarTest</span> </span>{
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">testLV</span><span class="hljs-params">(String inputClass)</span> </span>{
+        Tests.test(inputClass, <span class="hljs-string">&quot;src/test/resources/dataflow/livevar&quot;</span>,
+                LiveVariableAnalysis.ID, <span class="hljs-string">&quot;strongly:false&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testAssign</span><span class="hljs-params">()</span> </span>{
+        testLV(<span class="hljs-string">&quot;Assign&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testBranch</span><span class="hljs-params">()</span> </span>{
+        testLV(<span class="hljs-string">&quot;Branch&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testBranchLoop</span><span class="hljs-params">()</span> </span>{
+        testLV(<span class="hljs-string">&quot;BranchLoop&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Array</span><span class="hljs-params">()</span> </span>{
+        testLV(<span class="hljs-string">&quot;Array&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Array2</span><span class="hljs-params">()</span> </span>{
+        testLV(<span class="hljs-string">&quot;Array2&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Branch2</span><span class="hljs-params">()</span> </span>{
+        testLV(<span class="hljs-string">&quot;Branch2&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Fibonacci</span><span class="hljs-params">()</span> </span>{
+        testLV(<span class="hljs-string">&quot;Fibonacci&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Reference</span><span class="hljs-params">()</span> </span>{
+        testLV(<span class="hljs-string">&quot;Reference&quot;</span>);
+    }
+
+    <span class="hljs-meta">@Test</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testAll</span><span class="hljs-params">()</span> </span>{
+        testAssign();
+        testBranch();
+        testBranchLoop();
+        Array();
+        Fibonacci();
+        Reference();
+    }
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="6.程序分析理论讲解.html" class="navigation navigation-prev " aria-label="Previous page: 程序分析理论讲解">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="S2.程序分析实战实验篇初步.html" class="navigation navigation-next " aria-label="Next page: 程序分析实战实验篇初步">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"程序分析实战入门","level":"1.7.8","depth":2,"next":{"title":"程序分析实战实验篇初步","level":"1.7.9","depth":2,"path":"程序分析学习/S2.程序分析实战实验篇初步.md","ref":"程序分析学习/S2.程序分析实战实验篇初步.md","articles":[]},"previous":{"title":"程序分析理论讲解","level":"1.7.7","depth":2,"path":"程序分析学习/6.程序分析理论讲解.md","ref":"程序分析学习/6.程序分析理论讲解.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"程序分析学习/S1.程序分析实战入门.md","mtime":"2023-08-22T14:55:21.960Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-22T16:10:47.827Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
