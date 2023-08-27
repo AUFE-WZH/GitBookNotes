@@ -1,0 +1,781 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>时间复杂度 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2.摊还算法.html" />
+    
+    
+    <link rel="prev" href="0.算法学习大纲.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Tools/">
+            
+                <a href="../Tools/">
+            
+                    
+                    工具使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Tools/1.GitBook工具学习.html">
+            
+                <a href="../Tools/1.GitBook工具学习.html">
+            
+                    
+                    GitBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../编程语言/">
+            
+                <a href="../编程语言/">
+            
+                    
+                    编程语言
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../编程语言/1.C语言拾遗.html">
+            
+                <a href="../编程语言/1.C语言拾遗.html">
+            
+                    
+                    C语言拾遗
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../编程语言/2.C++.html">
+            
+                <a href="../编程语言/2.C++.html">
+            
+                    
+                    C++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../编程语言/3.Java.html">
+            
+                <a href="../编程语言/3.Java.html">
+            
+                    
+                    Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../编程语言/4.Python.html">
+            
+                <a href="../编程语言/4.Python.html">
+            
+                    
+                    Python
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../指令集/">
+            
+                <a href="../指令集/">
+            
+                    
+                    指令集
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../指令集/1.汇编指令集入门.html">
+            
+                <a href="../指令集/1.汇编指令集入门.html">
+            
+                    
+                    汇编指令集入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../指令集/2.内联汇编入门.html">
+            
+                <a href="../指令集/2.内联汇编入门.html">
+            
+                    
+                    内联汇编入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../指令集/3.80C51指令集学习.html">
+            
+                <a href="../指令集/3.80C51指令集学习.html">
+            
+                    
+                    80C51指令集学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../程序分析学习/0.程序分析学习大纲.html">
+            
+                <a href="../程序分析学习/0.程序分析学习大纲.html">
+            
+                    
+                    程序分析学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../程序分析学习/静态程序分析框架Tai-e设计之道.html">
+            
+                <a href="../程序分析学习/静态程序分析框架Tai-e设计之道.html">
+            
+                    
+                    静态程序分析框架Tai-e设计之道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../程序分析学习/1.程序分析基础知识学习.html">
+            
+                <a href="../程序分析学习/1.程序分析基础知识学习.html">
+            
+                    
+                    程序分析基础知识学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../程序分析学习/2.可达赋值分析.html">
+            
+                <a href="../程序分析学习/2.可达赋值分析.html">
+            
+                    
+                    可达赋值分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../程序分析学习/3.存活变量分析.html">
+            
+                <a href="../程序分析学习/3.存活变量分析.html">
+            
+                    
+                    存活变量分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../程序分析学习/4.可用表达式传播分析.html">
+            
+                <a href="../程序分析学习/4.可用表达式传播分析.html">
+            
+                    
+                    可用表达式传播分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../程序分析学习/5.三种分析总结.html">
+            
+                <a href="../程序分析学习/5.三种分析总结.html">
+            
+                    
+                    三种分析总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../程序分析学习/6.程序分析理论讲解.html">
+            
+                <a href="../程序分析学习/6.程序分析理论讲解.html">
+            
+                    
+                    程序分析理论讲解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../程序分析学习/S1.程序分析实战入门.html">
+            
+                <a href="../程序分析学习/S1.程序分析实战入门.html">
+            
+                    
+                    程序分析实战入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../程序分析学习/S2.程序分析实战实验篇初步.html">
+            
+                <a href="../程序分析学习/S2.程序分析实战实验篇初步.html">
+            
+                    
+                    程序分析实战实验篇初步
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="0.算法学习大纲.html">
+            
+                <a href="0.算法学习大纲.html">
+            
+                    
+                    算法学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.6.1" data-path="1.时间复杂度.html">
+            
+                <a href="1.时间复杂度.html">
+            
+                    
+                    时间复杂度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="2.摊还算法.html">
+            
+                <a href="2.摊还算法.html">
+            
+                    
+                    摊还算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../读书笔记/0.读书笔记大纲.html">
+            
+                <a href="../读书笔记/0.读书笔记大纲.html">
+            
+                    
+                    读书笔记
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../读书笔记/1.CSAPP读书笔记.html">
+            
+                <a href="../读书笔记/1.CSAPP读书笔记.html">
+            
+                    
+                    CSAPP读书笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../读书笔记/2.人月神话读书笔记.html">
+            
+                <a href="../读书笔记/2.人月神话读书笔记.html">
+            
+                    
+                    人月神话读书笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../其他开发/">
+            
+                <a href="../其他开发/">
+            
+                    
+                    其他开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../其他开发/VSCode插件开发入门/入门1.html">
+            
+                <a href="../其他开发/VSCode插件开发入门/入门1.html">
+            
+                    
+                    VSCode插件开发入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../其他开发/CSAPP实验/1.CSAPP实验.html">
+            
+                <a href="../其他开发/CSAPP实验/1.CSAPP实验.html">
+            
+                    
+                    CSAPP实验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../其他开发/Antlr4/Antlr4学习.html">
+            
+                <a href="../其他开发/Antlr4/Antlr4学习.html">
+            
+                    
+                    Antlr4
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >时间复杂度</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;">&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</h1>
+<h2 id="&#x4E00;&#x57FA;&#x672C;&#x6982;&#x5FF5;">&#x4E00;.&#x57FA;&#x672C;&#x6982;&#x5FF5;</h2>
+<h3 id="1&#x4E94;&#x4E2A;&#x57FA;&#x672C;&#x6982;&#x5FF5;">1.&#x4E94;&#x4E2A;&#x57FA;&#x672C;&#x6982;&#x5FF5;</h3>
+<pre><code class="lang-c">&#x39F;&#xFF0C;&#x8BFB;&#x97F3;&#xFF1A;big-oh&#xFF1B;&#x8868;&#x793A;&#x4E0A;&#x754C;&#xFF0C;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#x3002;
+
+&#x3A9;&#xFF0C;&#x8BFB;&#x97F3;&#xFF1A;big omega&#x3001;&#x6B27;&#x7C73;&#x4F3D;&#xFF1B;&#x8868;&#x793A;&#x4E0B;&#x754C;&#xFF0C;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x3002;
+
+&#x398;&#xFF0C;&#x8BFB;&#x97F3;&#xFF1A;theta&#x3001;&#x897F;&#x5854;&#xFF1B;&#x65E2;&#x662F;&#x4E0A;&#x754C;&#x4E5F;&#x662F;&#x4E0B;&#x754C;&#xFF0C;&#x79F0;&#x4E3A;&#x786E;&#x754C;&#xFF0C;&#x7B49;&#x4E8E;&#x3002;
+
+&#x3BF;&#xFF0C;&#x8BFB;&#x97F3;&#xFF1A;small-oh&#xFF1B;&#x8868;&#x793A;&#x4E0A;&#x754C;&#xFF0C;&#x5C0F;&#x4E8E;&#x3002;
+
+&#x3C9;&#xFF0C;&#x8BFB;&#x97F3;&#xFF1A;small omega&#xFF1B;&#x8868;&#x793A;&#x4E0B;&#x754C;&#xFF0C;&#x5927;&#x4E8E;&#x3002;
+
+&#x39F;&#x662F;&#x6E10;&#x8FDB;&#x4E0A;&#x754C;&#xFF0C;&#x3A9;&#x662F;&#x6E10;&#x8FDB;&#x4E0B;&#x754C;&#x3002;&#x398;&#x9700;&#x540C;&#x65F6;&#x6EE1;&#x8DB3;&#x5927;&#x39F;&#x548C;&#x3A9;&#xFF0C;&#x6545;&#x79F0;&#x4E3A;&#x786E;&#x754C;&#x3002;&#x39F;&#x6781;&#x5176;&#x6709;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x8868;&#x793A;&#x4E86;&#x6700;&#x5DEE;&#x6027;&#x80FD;&#x3002;
+</code></pre>
+<p><img src="image/1.&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;/&#x3BF;&#x4E0E;&#x3C9;&#x542B;&#x4E49;.png" alt="&#x3BF;&#x4E0E;&#x3C9;&#x542B;&#x4E49;"></p>
+<h3 id="2&#x5927;o&#x8868;&#x793A;&#x6CD5;">2.&#x5927;O&#x8868;&#x793A;&#x6CD5;</h3>
+<h4 id="21-&#x5B9A;&#x4E49;">2.1 &#x5B9A;&#x4E49;</h4>
+<pre><code class="lang-c">f(x) = O(g(x)) &#x8868;&#x793A;&#x7684;&#x542B;&#x4E49;&#x662F;f(x)&#x4EE5;g(x)&#x4E3A;&#x4E0A;&#x754C;
+</code></pre>
+<h4 id="22-&#x89E3;&#x91CA;">2.2 &#x89E3;&#x91CA;</h4>
+<pre><code class="lang-c">&#x5F53;&#x51FD;&#x6570;&#x7684;&#x5927;&#x5C0F;&#x53EA;&#x6709;&#x4E0A;&#x754C;&#xFF0C;&#x6CA1;&#x6709;&#x660E;&#x786E;&#x4E0B;&#x754C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5927;O&#x8868;&#x793A;&#x6CD5;&#xFF0C;&#x8BE5;&#x6E10;&#x8FDB;&#x63CF;&#x8FF0;&#x7B26;&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x63CF;&#x8FF0;&#x7B97;&#x6CD5;&#x7684; &#x6700;&#x574F;&#x590D;&#x6742;&#x5EA6;&#x3002;
+
+f(x) = O(g(x))&#x6B63;&#x5F0F;&#x7684;&#x6570;&#x5B66;&#x5B9A;&#x4E49;&#xFF1A;&#x5B58;&#x5728;&#x6B63;&#x5E38;&#x6570;c&#x3001;n&#x3001;n0&#xFF0C;&#x5F53; n&gt;n0 &#x7684;&#x65F6;&#xFF0C;&#x4EFB;&#x610F;&#x7684; f(n) &#x7B26;&#x5408; <span class="hljs-number">0</span> &lt;= f(n) &lt;= c.g(n)&#x3002;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;
+</code></pre>
+<p><img src="image/1.&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;/&#x5927;O&#x8868;&#x793A;&#x6CD5;.png" alt="&#x5927;O&#x8868;&#x793A;&#x6CD5;"></p>
+<h3 id="3&#x5927;&#x3C9;&#x8868;&#x793A;&#x6CD5;">3.&#x5927;&#x3A9;&#x8868;&#x793A;&#x6CD5;</h3>
+<h4 id="31-&#x5B9A;&#x4E49;">3.1 &#x5B9A;&#x4E49;</h4>
+<pre><code class="lang-c">f(x) = &#x3A9;(g(x)) &#x8868;&#x793A;&#x7684;&#x542B;&#x4E49;&#x662F;f(x)&#x4EE5;g(x)&#x4E3A;&#x4E0B;&#x754C;
+</code></pre>
+<h3 id="4&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;&#x5B9A;&#x4E49;">4.&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;&#x5B9A;&#x4E49;</h3>
+<ul>
+<li>&#x6211;&#x4EEC;&#x901A;&#x5E38;&#x8BA1;&#x7B97;&#x5176;&#x4E2D;&#x5173;&#x952E;&#x6B65;&#x9AA4;&#x7684;&#x6267;&#x884C;&#x6B21;&#x6570;&#x4F5C;&#x4E3A;&#x6B64;&#x7B97;&#x6CD5;&#x7684;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</li>
+</ul>
+<h4 id="41-&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x6392;&#x5E8F;&#x8868;">4.1 &#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x6392;&#x5E8F;&#x8868;</h4>
+<p><img src="image/1.&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;/&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x6392;&#x5E8F;&#x8868;.png" alt="&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x6392;&#x5E8F;&#x8868;"></p>
+<h2 id="&#x4E8C;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;">&#x4E8C;.&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;</h2>
+<h3 id="1-&#x8BA1;&#x7B97;&#x65B9;&#x5F0F;&#x5217;&#x4E3E;">1. &#x8BA1;&#x7B97;&#x65B9;&#x5F0F;&#x5217;&#x4E3E;</h3>
+<ul>
+<li>&#x7B80;&#x5355;&#x573A;&#x666F;&#x5217;&#x4E3E;&#x5FAA;&#x73AF;&#x6B21;&#x6570;&#xFF0C;&#x627E;&#x5230;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</li>
+<li>&#x590D;&#x6742;&#x573A;&#x666F;<ul>
+<li>&#x7528;&#x4EE3;&#x5165;&#x6CD5;&#x6C42;&#x89E3;&#x9012;&#x5F52;&#x5F0F;</li>
+<li>&#x4F7F;&#x7528;&#x9012;&#x5F52;&#x6811;&#x6C42;&#x89E3;&#xFF08;&#x89E3;&#x51B3;&#x4EE3;&#x5165;&#x6CD5;&#x7684;&#x96BE;&#x4EE5;&#x731C;&#x6D4B;&#x89E3;&#x7684;&#x95EE;&#x9898;&#xFF09;</li>
+<li>&#x4F7F;&#x7528;&#x4E3B;&#x5B9A;&#x7406;&#x6C42;&#x89E3;</li>
+</ul>
+</li>
+</ul>
+<h3 id="2&#x7B80;&#x5355;&#x573A;&#x666F;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;">2.&#x7B80;&#x5355;&#x573A;&#x666F;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;</h3>
+<h4 id="21-&#x4E00;&#x91CD;&#x5FAA;&#x73AF;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;">2.1 &#x4E00;&#x91CD;&#x5FAA;&#x73AF;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;</h4>
+<h5 id="&#xFF08;1&#xFF09;&#x4F8B;1">&#xFF08;1&#xFF09;&#x4F8B;1</h5>
+<pre><code class="lang-c"><span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">while</span> (i &lt; n) {
+    i = i * <span class="hljs-number">2</span>;
+}
+</code></pre>
+<p><img src="image/1.&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;/&#x4E00;&#x91CD;&#x5FAA;&#x73AF;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;&#x4F8B;1.png" alt="&#x4E00;&#x91CD;&#x5FAA;&#x73AF;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;&#x4F8B;1"></p>
+<h5 id="&#xFF08;2&#xFF09;&#x4F8B;2">&#xFF08;2&#xFF09;&#x4F8B;2</h5>
+<pre><code class="lang-c"><span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>;
+<span class="hljs-keyword">while</span> (i * i &lt; n) {
+    i++;
+}
+</code></pre>
+<p><img src="image/1.&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;/&#x4E00;&#x91CD;&#x5FAA;&#x73AF;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;&#x4F8B;2.png" alt="&#x4E00;&#x91CD;&#x5FAA;&#x73AF;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;&#x4F8B;2"></p>
+<h4 id="22-&#x4E8C;&#x91CD;&#x5FAA;&#x73AF;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;">2.2 &#x4E8C;&#x91CD;&#x5FAA;&#x73AF;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;</h4>
+<h5 id="&#xFF08;1&#xFF09;&#x4F8B;1">&#xFF08;1&#xFF09;&#x4F8B;1</h5>
+<p><img src="image/1.&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;/&#x4E8C;&#x91CD;&#x5FAA;&#x73AF;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;&#x4F8B;1.png" alt="&#x4E8C;&#x91CD;&#x5FAA;&#x73AF;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;&#x4F8B;1"></p>
+<h5 id="&#xFF08;2&#xFF09;&#x4F8B;2">&#xFF08;2&#xFF09;&#x4F8B;2</h5>
+<p><img src="image/1.&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;/&#x4E8C;&#x91CD;&#x5FAA;&#x73AF;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;&#x4F8B;2.png" alt="&#x4E8C;&#x91CD;&#x5FAA;&#x73AF;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;&#x4F8B;2"></p>
+<h5 id="&#xFF08;3&#xFF09;&#x4F8B;3">&#xFF08;3&#xFF09;&#x4F8B;3</h5>
+<p><img src="image/1.&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;/&#x4E8C;&#x91CD;&#x5FAA;&#x73AF;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;&#x4F8B;3.png" alt="&#x4E8C;&#x91CD;&#x5FAA;&#x73AF;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;&#x4F8B;3"></p>
+<h5 id="&#xFF08;4&#xFF09;&#x4F8B;4">&#xFF08;4&#xFF09;&#x4F8B;4</h5>
+<p><img src="image/1.&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;/&#x4E8C;&#x91CD;&#x5FAA;&#x73AF;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;&#x4F8B;4.png" alt="&#x4E8C;&#x91CD;&#x5FAA;&#x73AF;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;&#x4F8B;4"></p>
+<h3 id="3&#x590D;&#x6742;&#x573A;&#x666F;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;">3.&#x590D;&#x6742;&#x573A;&#x666F;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x8BA1;&#x7B97;</h3>
+<h4 id="31-&#x4EE3;&#x5165;&#x6CD5;&#x6C42;&#x89E3;&#x9012;&#x63A8;&#x5F0F;">3.1 &#x4EE3;&#x5165;&#x6CD5;&#x6C42;&#x89E3;&#x9012;&#x63A8;&#x5F0F;</h4>
+<h5 id="&#xFF08;1&#xFF09;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;">&#xFF08;1&#xFF09;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;</h5>
+<pre><code class="lang-c"><span class="hljs-number">1.</span>&#x731C;&#x6D4B;&#x89E3;&#x7684;&#x5F62;&#x5F0F;&#x3002;
+<span class="hljs-number">2.</span>&#x7528;&#x6570;&#x5B66;&#x5F52;&#x7EB3;&#x6CD5;&#x6C42;&#x51FA;&#x89E3;&#x4E2D;&#x7684;&#x5E38;&#x6570;&#xFF0C;&#x5E76;&#x8BC1;&#x660E;&#x89E3;&#x662F;&#x6B63;&#x786E;&#x7684;&#x3002;
+</code></pre>
+<h5 id="&#xFF08;2&#xFF09;&#x4F8B;&#x5B50;">&#xFF08;2&#xFF09;&#x4F8B;&#x5B50;</h5>
+<p><img src="image/1.&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;/&#x4EE3;&#x5165;&#x6CD5;&#x6C42;&#x89E3;&#x9012;&#x63A8;&#x5F0F;.png" alt="&#x4EE3;&#x5165;&#x6CD5;&#x6C42;&#x89E3;&#x9012;&#x63A8;&#x5F0F;"></p>
+<h4 id="33-&#x9012;&#x5F52;&#x6811;&#x6C42;&#x89E3;&#x9012;&#x63A8;&#x5F0F;">3.3 &#x9012;&#x5F52;&#x6811;&#x6C42;&#x89E3;&#x9012;&#x63A8;&#x5F0F;</h4>
+<h5 id="331-&#x65B9;&#x6CD5;&#x6982;&#x5FF5;&#x4ECB;&#x7ECD;">3.3.1 &#x65B9;&#x6CD5;&#x6982;&#x5FF5;&#x4ECB;&#x7ECD;</h5>
+<p><img src="image/1.&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;/&#x9012;&#x5F52;&#x6811;&#x6C42;&#x89E3;&#x9012;&#x63A8;&#x5F0F;&#x65B9;&#x6CD5;&#x4ECB;&#x7ECD;.png" alt="&#x9012;&#x5F52;&#x6811;&#x6C42;&#x89E3;&#x9012;&#x63A8;&#x5F0F;&#x65B9;&#x6CD5;&#x4ECB;&#x7ECD;"></p>
+<h5 id="332-&#x64CD;&#x4F5C;&#x65B9;&#x5F0F;&#x4ECB;&#x7ECD;">3.3.2 &#x64CD;&#x4F5C;&#x65B9;&#x5F0F;&#x4ECB;&#x7ECD;</h5>
+<p><img src="image/1.&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;/&#x9012;&#x5F52;&#x6811;&#x6C42;&#x89E3;&#x9012;&#x63A8;&#x5F0F;&#x64CD;&#x4F5C;&#x65B9;&#x5F0F;&#x4ECB;&#x7ECD;&#x4ECB;&#x7ECD;.png" alt="&#x9012;&#x5F52;&#x6811;&#x6C42;&#x89E3;&#x9012;&#x63A8;&#x5F0F;&#x64CD;&#x4F5C;&#x65B9;&#x5F0F;&#x4ECB;&#x7ECD;&#x4ECB;&#x7ECD;"></p>
+<h5 id="333-&#x4F8B;1">3.3.3 &#x4F8B;1</h5>
+<p><img src="image/1.&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;/&#x9012;&#x5F52;&#x6811;&#x6C42;&#x89E3;&#x9012;&#x63A8;&#x5F0F;&#x4F8B;1.png" alt="&#x9012;&#x5F52;&#x6811;&#x6C42;&#x89E3;&#x9012;&#x63A8;&#x5F0F;&#x4F8B;1"></p>
+<h5 id="334-&#x4F8B;2">3.3.4 &#x4F8B;2</h5>
+<p><img src="image/1.&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;/&#x9012;&#x5F52;&#x6811;&#x6C42;&#x89E3;&#x9012;&#x63A8;&#x5F0F;&#x4F8B;2.png" alt="&#x9012;&#x5F52;&#x6811;&#x6C42;&#x89E3;&#x9012;&#x63A8;&#x5F0F;&#x4F8B;2"></p>
+<h5 id="335-&#x4F8B;3">3.3.5 &#x4F8B;3</h5>
+<p><img src="image/1.&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;/&#x9012;&#x5F52;&#x6811;&#x6C42;&#x89E3;&#x9012;&#x63A8;&#x5F0F;&#x4F8B;3.png" alt="&#x9012;&#x5F52;&#x6811;&#x6C42;&#x89E3;&#x9012;&#x63A8;&#x5F0F;&#x4F8B;3"></p>
+<h4 id="34-&#x4E3B;&#x5B9A;&#x7406;&#x8BA1;&#x7B97;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;">3.4 &#x4E3B;&#x5B9A;&#x7406;&#x8BA1;&#x7B97;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</h4>
+<h5 id="341-&#x4E25;&#x683C;&#x5B9A;&#x4E49;">3.4.1 &#x4E25;&#x683C;&#x5B9A;&#x4E49;</h5>
+<p><img src="image/1.&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;/&#x4E3B;&#x5B9A;&#x7406;&#x8BA1;&#x7B97;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E25;&#x683C;&#x5B9A;&#x4E49;.png" alt="&#x4E3B;&#x5B9A;&#x7406;&#x8BA1;&#x7B97;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E25;&#x683C;&#x5B9A;&#x4E49;"></p>
+<h5 id="342-&#x901A;&#x4FD7;&#x5B9A;&#x4E49;">3.4.2 &#x901A;&#x4FD7;&#x5B9A;&#x4E49;</h5>
+<p><img src="image/1.&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;/&#x4E3B;&#x5B9A;&#x7406;&#x8BA1;&#x7B97;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x901A;&#x4FD7;&#x5B9A;&#x4E49;.png" alt="&#x4E3B;&#x5B9A;&#x7406;&#x8BA1;&#x7B97;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x901A;&#x4FD7;&#x5B9A;&#x4E49;"></p>
+<h5 id="343-&#x4F8B;1">3.4.3 &#x4F8B;1</h5>
+<p><img src="image/1.&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;/&#x4E3B;&#x5B9A;&#x7406;&#x8BA1;&#x7B97;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4F8B;1.png" alt="&#x4E3B;&#x5B9A;&#x7406;&#x8BA1;&#x7B97;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4F8B;1"></p>
+<h5 id="344-&#x4F8B;2">3.4.4 &#x4F8B;2</h5>
+<p><img src="image/1.&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;/&#x4E3B;&#x5B9A;&#x7406;&#x8BA1;&#x7B97;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4F8B;2.png" alt="&#x4E3B;&#x5B9A;&#x7406;&#x8BA1;&#x7B97;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4F8B;2"></p>
+<h5 id="345-&#x4F8B;3">3.4.5 &#x4F8B;3</h5>
+<p><img src="image/1.&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;/&#x4E3B;&#x5B9A;&#x7406;&#x8BA1;&#x7B97;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4F8B;3.png" alt="&#x4E3B;&#x5B9A;&#x7406;&#x8BA1;&#x7B97;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4F8B;3"></p>
+<h5 id="346-&#x4F8B;4">3.4.6 &#x4F8B;4</h5>
+<ul>
+<li>&#x89E3;&#x4E0D;&#x4E86;&#xFF0C;&#x5219;&#x4F7F;&#x7528;&#x901A;&#x7528;&#x505A;&#x6CD5;&#xFF1A;&#x9012;&#x5F52;&#x6811;+&#x4EE3;&#x5165;&#x6CD5;</li>
+</ul>
+<p><img src="image/1.&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;/&#x4E3B;&#x5B9A;&#x7406;&#x8BA1;&#x7B97;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4F8B;4.png" alt="&#x4E3B;&#x5B9A;&#x7406;&#x8BA1;&#x7B97;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4F8B;4"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="0.算法学习大纲.html" class="navigation navigation-prev " aria-label="Previous page: 算法学习">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2.摊还算法.html" class="navigation navigation-next " aria-label="Next page: 摊还算法">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"时间复杂度","level":"1.6.1","depth":2,"next":{"title":"摊还算法","level":"1.6.2","depth":2,"path":"算法学习/2.摊还算法.md","ref":"算法学习/2.摊还算法.md","articles":[]},"previous":{"title":"算法学习","level":"1.6","depth":1,"path":"算法学习/0.算法学习大纲.md","ref":"算法学习/0.算法学习大纲.md","articles":[{"title":"时间复杂度","level":"1.6.1","depth":2,"path":"算法学习/1.时间复杂度.md","ref":"算法学习/1.时间复杂度.md","articles":[]},{"title":"摊还算法","level":"1.6.2","depth":2,"path":"算法学习/2.摊还算法.md","ref":"算法学习/2.摊还算法.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"算法学习/1.时间复杂度.md","mtime":"2023-08-27T14:21:22.335Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-27T14:47:51.117Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
