@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>摊还算法 · GitBook</title>
+        <title>NP完全性理论 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../读书笔记/0.读书笔记大纲.html" />
+    <link rel="next" href="3.摊还算法.html" />
     
     
     <link rel="prev" href="1.时间复杂度.html" />
@@ -426,9 +426,22 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6.2" data-path="2.摊还算法.html">
+        <li class="chapter active" data-level="1.6.2" data-path="2.NP完全性理论.html">
             
-                <a href="2.摊还算法.html">
+                <a href="2.NP完全性理论.html">
+            
+                    
+                    NP完全性理论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="3.摊还算法.html">
+            
+                <a href="3.摊还算法.html">
             
                     
                     摊还算法
@@ -577,7 +590,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >摊还算法</a>
+        <a href=".." >NP完全性理论</a>
     </h1>
 </div>
 
@@ -592,7 +605,56 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x644A;&#x8FD8;&#x7B97;&#x6CD5;">&#x644A;&#x8FD8;&#x7B97;&#x6CD5;</h1>
+                                <h1 id="np&#x5B8C;&#x5168;&#x6027;&#x7406;&#x8BBA;"><span id="0">NP&#x5B8C;&#x5168;&#x6027;&#x7406;&#x8BBA;</span></h1>
+<ul>
+<li><a href="#1">1.NP&#x5B8C;&#x5168;&#x6027;&#x7406;&#x8BBA;&#x57FA;&#x7840;</a></li>
+</ul>
+<h2 id="1np&#x5B8C;&#x5168;&#x6027;&#x7406;&#x8BBA;&#x57FA;&#x7840;-back"><span id="1">1.NP&#x5B8C;&#x5168;&#x6027;&#x7406;&#x8BBA;&#x57FA;&#x7840;</span> <a href="#0">back</a></h2>
+<h3 id="11-&#x591A;&#x9879;&#x5F0F;&#x4E0E;&#x975E;&#x591A;&#x9879;&#x5F0F;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;">1.1 &#x591A;&#x9879;&#x5F0F;&#x4E0E;&#x975E;&#x591A;&#x9879;&#x5F0F;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</h3>
+<p><img src="image/2.NP&#x5B8C;&#x5168;&#x6027;&#x7406;&#x8BBA;/&#x591A;&#x9879;&#x5F0F;&#x4E0E;&#x975E;&#x591A;&#x9879;&#x5F0F;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;.png" alt="&#x591A;&#x9879;&#x5F0F;&#x4E0E;&#x975E;&#x591A;&#x9879;&#x5F0F;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;"></p>
+<h3 id="12-p&#x95EE;&#x9898;">1.2 P&#x95EE;&#x9898;</h3>
+<h4 id="&#xFF08;1&#xFF09;p&#x95EE;&#x9898;&#x5B9A;&#x4E49;">&#xFF08;1&#xFF09;P&#x95EE;&#x9898;&#x5B9A;&#x4E49;</h4>
+<pre><code class="lang-markdown">P&#x95EE;&#x9898;&#xFF1A;
+<span class="hljs-code">    &#x4E00;&#x7C7B;&#x80FD;&#x591F;&#x7528;&#xFF08;&#x786E;&#x5B9A;&#x7684;&#xFF09;&#x7B97;&#x6CD5;&#x5728;&#x591A;&#x9879;&#x5F0F;&#x65F6;&#x95F4;&#x5185;&#x6C42;&#x89E3;&#x7684;&#x53EF;&#x5224;&#x5B9A;&#x95EE;&#x9898;</span>
+
+&#x6CE8;&#xFF1A;&#x8FD9;&#x79CD;&#x95EE;&#x9898;&#x7C7B;&#x578B;&#x4E5F;&#x79F0;&#x4E3A;&#x591A;&#x9879;&#x5F0F;&#x7C7B;&#x578B;
+</code></pre>
+<h3 id="13-np&#x95EE;&#x9898;">1.3 NP&#x95EE;&#x9898;</h3>
+<h4 id="&#xFF08;1&#xFF09;np&#x95EE;&#x9898;&#x5B9A;&#x4E49;">&#xFF08;1&#xFF09;NP&#x95EE;&#x9898;&#x5B9A;&#x4E49;</h4>
+<pre><code class="lang-markdown">NP&#x95EE;&#x9898;&#xFF1A;
+<span class="hljs-code">    1.&#x4E00;&#x7C7B;&#x80FD;&#x591F;&#x7528;&#x4E0D;&#x786E;&#x5B9A;&#x7B97;&#x6CD5;&#x5728;&#x591A;&#x9879;&#x5F0F;&#x65F6;&#x95F4;&#x5185;&#x6C42;&#x89E3;&#x7684;&#x53EF;&#x5224;&#x5B9A;&#x95EE;&#x9898;</span>
+
+&#x6CE8;1&#xFF1A;&#x4E0A;&#x8FF0;&#x7B49;&#x4EF7;&#x4E8E; =&gt; &#x5728;&#x786E;&#x5B9A;&#x6027;&#x8BA1;&#x7B97;&#x6A21;&#x578B;&#x4E0B;&#x591A;&#x9879;&#x5F0F;&#x65F6;&#x95F4;&#x53EF;&#x9A8C;&#x8BC1;&#x7684;&#x53EF;&#x5224;&#x5B9A;&#x95EE;&#x9898;
+
+&#x6CE8;2&#xFF1A;P &#x2286; NP
+</code></pre>
+<h3 id="14-npc&#x95EE;&#x9898;">1.4 NPC&#x95EE;&#x9898;</h3>
+<h4 id="&#xFF08;1&#xFF09;npc&#x95EE;&#x9898;&#x5B9A;&#x4E49;">&#xFF08;1&#xFF09;NPC&#x95EE;&#x9898;&#x5B9A;&#x4E49;</h4>
+<pre><code class="lang-markdown">NPC&#x95EE;&#x9898;&#xFF1A;
+<span class="hljs-code">    &#x53EF;&#x5224;&#x5B9A;&#x6027;&#x95EE;&#x9898;D&#xFF0C;&#x6EE1;&#x8DB3;&#xFF1A;</span>
+<span class="hljs-code">    1.&#x5176;&#x5C5E;&#x4E8E;NP&#x95EE;&#x9898;</span>
+<span class="hljs-code">    2.NP&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x95EE;&#x9898;&#x90FD;&#x80FD;&#x591F;&#x5728;&#x591A;&#x9879;&#x5F0F;&#x65F6;&#x95F4;&#x5185;&#x89C4;&#x7EA6;&#x4E3A;D</span>
+<span class="hljs-code">    &#x6EE1;&#x8DB3;&#x4E0A;&#x8FF0;&#x4E24;&#x70B9;&#xFF0C;&#x5219;D&#x4E3A;NP&#x5B8C;&#x5168;&#x95EE;&#x9898;</span>
+</code></pre>
+<h4 id="&#xFF08;2&#xFF09;npc&#x95EE;&#x9898;&#x7684;&#x610F;&#x4E49;">&#xFF08;2&#xFF09;NPC&#x95EE;&#x9898;&#x7684;&#x610F;&#x4E49;</h4>
+<pre><code class="lang-markdown"><span class="hljs-code">    &#x6709;&#x4E00;&#x4E2A;NPC&#x95EE;&#x9898;&#x627E;&#x5230;&#x591A;&#x9879;&#x5F0F;&#x65F6;&#x95F4;&#x7684;&#x7B97;&#x6CD5;&#xFF0C;&#x5219;&#x6240;&#x6709;NPC&#x95EE;&#x9898;&#x90FD;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x3002;</span>
+</code></pre>
+<h4 id="&#xFF08;3&#xFF09;&#x6CE8;&#x610F;&#x70B9;">&#xFF08;3&#xFF09;&#x6CE8;&#x610F;&#x70B9;</h4>
+<pre><code class="lang-c"><span class="hljs-number">1.</span>&#x4E0D;&#x8981;&#x6D6A;&#x8D39;&#x65F6;&#x95F4;&#x53BB;&#x5BFB;&#x627E;&#x6709;&#x6548;&#x7B97;&#x6CD5;
+<span class="hljs-number">2.</span>&#x53EF;&#x4EE5;&#x627E;&#x8FD1;&#x4F3C;&#x7B97;&#x6CD5;&#x6216;&#x7279;&#x4F8B;&#x7B97;&#x6CD5;&#x89E3;&#x51B3;NPC&#x95EE;&#x9898;
+<span class="hljs-number">3.</span>&#x6CE8;&#x610F;&#x4E00;&#x4E9B;&#x770B;&#x4F3C;&#x7B80;&#x5355;&#x7684;&#x95EE;&#x9898;&#x4E5F;&#x662F;NPC&#x95EE;&#x9898;
+</code></pre>
+<h3 id="15-np&#x96BE;&#x95EE;&#x9898;">1.5 NP&#x96BE;&#x95EE;&#x9898;</h3>
+<h4 id="&#xFF08;1&#xFF09;np&#x96BE;&#x95EE;&#x9898;&#x5B9A;&#x4E49;">&#xFF08;1&#xFF09;NP&#x96BE;&#x95EE;&#x9898;&#x5B9A;&#x4E49;</h4>
+<pre><code class="lang-markdown">NP&#x96BE;&#x95EE;&#x9898;&#xFF1A;
+<span class="hljs-code">    &#x95EE;&#x9898;L&#x6EE1;&#x8DB3;&#xFF1A;</span>
+<span class="hljs-code">        1.NP&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x95EE;&#x9898;&#x90FD;&#x80FD;&#x591F;&#x5728;&#x591A;&#x9879;&#x5F0F;&#x65F6;&#x95F4;&#x5185;&#x89C4;&#x7EA6;&#x4E3A;L</span>
+<span class="hljs-code">        2.L&#x4E0D;&#x4E00;&#x5B9A;&#x5C5E;&#x4E8E;NP&#x95EE;&#x9898;</span>
+
+&#x6CE8;&#xFF1A;NPC = &#xFF08;NP &#x2229; NP&#x96BE;&#xFF09;
+</code></pre>
+<h3 id="16-&#x90E8;&#x5206;np&#x5B8C;&#x5168;&#x95EE;&#x9898;&#x6811;">1.6 &#x90E8;&#x5206;NP&#x5B8C;&#x5168;&#x95EE;&#x9898;&#x6811;</h3>
+<p><img src="image/2.NP&#x5B8C;&#x5168;&#x6027;&#x7406;&#x8BBA;/&#x90E8;&#x5206;NP&#x5B8C;&#x5168;&#x95EE;&#x9898;&#x6811;.png" alt="&#x90E8;&#x5206;NP&#x5B8C;&#x5168;&#x95EE;&#x9898;&#x6811;"></p>
 
                                 
                                 </section>
@@ -625,7 +687,7 @@
                 </a>
                 
                 
-                <a href="../读书笔记/0.读书笔记大纲.html" class="navigation navigation-next " aria-label="Next page: 读书笔记">
+                <a href="3.摊还算法.html" class="navigation navigation-next " aria-label="Next page: 摊还算法">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -636,7 +698,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"摊还算法","level":"1.6.2","depth":2,"next":{"title":"读书笔记","level":"1.7","depth":1,"path":"读书笔记/0.读书笔记大纲.md","ref":"读书笔记/0.读书笔记大纲.md","articles":[{"title":"CSAPP读书笔记","level":"1.7.1","depth":2,"path":"读书笔记/1.CSAPP读书笔记.md","ref":"读书笔记/1.CSAPP读书笔记.md","articles":[]},{"title":"人月神话读书笔记","level":"1.7.2","depth":2,"path":"读书笔记/2.人月神话读书笔记.md","ref":"读书笔记/2.人月神话读书笔记.md","articles":[]}]},"previous":{"title":"时间复杂度","level":"1.6.1","depth":2,"path":"算法学习/1.时间复杂度.md","ref":"算法学习/1.时间复杂度.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"算法学习/2.摊还算法.md","mtime":"2023-08-27T14:22:21.805Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-27T14:47:51.117Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"NP完全性理论","level":"1.6.2","depth":2,"next":{"title":"摊还算法","level":"1.6.3","depth":2,"path":"算法学习/3.摊还算法.md","ref":"算法学习/3.摊还算法.md","articles":[]},"previous":{"title":"时间复杂度","level":"1.6.1","depth":2,"path":"算法学习/1.时间复杂度.md","ref":"算法学习/1.时间复杂度.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"算法学习/2.NP完全性理论.md","mtime":"2023-08-30T14:58:35.171Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-06T15:30:34.613Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
