@@ -42,4 +42,6 @@
     * [VSCode插件开发入门](其他开发/VSCode插件开发入门/入门1.md)
     * [CSAPP实验](其他开发/CSAPP实验/1.CSAPP实验.md)
     * [Antlr4](其他开发/Antlr4/Antlr4学习.md)
+* [开源项目学习]
+    * [编译器相关](开源项目学习/1.编译器相关.md)
 
